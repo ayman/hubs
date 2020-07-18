@@ -278,6 +278,8 @@
   "commands.debug": "Toggle physics debug rendering.",
   "commands.vrstats": "Toggle stats in VR.",
   "commands.audiomode": "(experimental) Toggle positional audio.",
+  "commands.tourguide": "(experimental) Follow a guide or leave blank to turn off.",
+  "commands.teleport": "(experimental) Teleport to another player.",  
   "preferences.closeButton": "Close Preferences Menu",
   "preferences.selectCategory": "Select category",
   "preferences.resetToDefault": "Reset preference to default",

@@ -162,6 +162,9 @@ import { SOUND_CHAT_MESSAGE } from "./systems/sound-effects-system";
 
 import "./gltf-component-mappings";
 
+import './systems/research/research-logger';
+import './systems/research/research-tourguide';
+
 import { App } from "./App";
 import { platformUnsupported } from "./support";
 
@@ -682,7 +685,7 @@ function handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data)
 }
 
 async function runBotMode(scene, entryManager) {
-  const noop = () => {};
+  const noop = () => { };
   const alwaysFalse = () => false;
   scene.renderer = {
     setAnimationLoop: noop,
