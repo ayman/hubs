@@ -158,6 +158,9 @@ import { SOUND_CHAT_MESSAGE } from "./systems/sound-effects-system";
 
 import "./gltf-component-mappings";
 
+import './systems/research/research-logger';
+import './systems/research/research-tourguide';
+
 import { App } from "./App";
 
 window.APP = new App();
@@ -688,7 +691,7 @@ function handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data)
 }
 
 async function runBotMode(scene, entryManager) {
-  const noop = () => {};
+  const noop = () => { };
   scene.renderer = { setAnimationLoop: noop, render: noop };
 
   while (!NAF.connection.isConnected()) await nextTick();

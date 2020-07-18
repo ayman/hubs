@@ -58,6 +58,7 @@
     "ammo-debug-drawer": "github:infinitelee/ammo-debug-drawer",
     "ammo.js": "github:mozillareality/ammo.js#hubs/master",
     "animejs": "github:mozillareality/anime#hubs/master",
+    "axios": "^0.19.2",
     "buffered-interpolation": "^0.2.5",
     "classnames": "^2.2.5",
     "color": "^3.1.2",
@@ -106,7 +107,7 @@
     "three-mesh-bvh": "^0.1.2",
     "three-pathfinding": "github:MozillaReality/three-pathfinding#hubs/master2",
     "three-to-ammo": "github:infinitelee/three-to-ammo",
-    "uuid": "^3.2.1",
+    "uuid": "^3.4.0",
     "webrtc-adapter": "^6.0.2",
     "zip-loader": "^1.1.0"
   },

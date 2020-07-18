@@ -150,6 +150,40 @@ export default class MessageDispatch {
           this.log(`Positional Audio ${shouldEnablePositionalAudio ? "enabled" : "disabled"}.`);
         }
         break;
+      case "teleport":
+        {
+          if (args[0] === undefined) {
+            this.log("You need to specify a teleport desitination.");
+          } else {
+            const player = args.join(" ").trim();
+            const result = AFRAME.scenes[0].systems["research-tourguide"].teleportToPlayer(player, true);
+            if (result) {
+              this.log("Teleporting to " + player);
+            } else {
+              this.log("Can't teleport to '" + player + "' who isn't in the scene.");
+            }
+
+          }
+        }
+        break;
+      case "tourguide":
+        // HACK: there's probably a correct way of getting to the top scene. Calling this.scene didn't work.
+        {
+          if (args[0] === undefined || args.join("").trim === "") {
+            AFRAME.scenes[0].systems["research-tourguide"].removeTourGuide();
+            this.log("Tourguide mode is disabled.");
+          } else {
+            const player = args.join(" ").trim();
+            const tourGuide = AFRAME.scenes[0].systems["research-tourguide"].setTourGuide(player);
+            if (tourGuide != "") {
+              this.log("Tourguide set to " + tourGuide + ".");
+            } else {
+              AFRAME.scenes[0].systems["research-tourguide"].removeTourGuide();
+              this.log("Guide '" + args.join(" ") + "' is not in scene, tourguide is disabled.");
+            }
+          }
+        }
+        break;
     }
   };
 }
