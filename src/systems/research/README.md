@@ -6,6 +6,7 @@ in the root `hubs.js` document as a starting point.
 
 ## plugins
 
+<<<<<<< HEAD
 ### research-tourguide
 
 This allows a group of people to automatically follow a player. The
@@ -26,6 +27,8 @@ The tourguide chat added code into `message-dispatch.js` and
 `./react-components/chat-command-help.js` as well as the i18n
 translations.
 
+=======
+>>>>>>> 8b50a74dab21e359463f2898037ccb4ef1c8c7e1
 ### research-logger
 
 This is a client side logger where user location and actions (but not
@@ -105,7 +108,31 @@ For each data tick we will log an array line of a csv:
 
 I think this is the proper orientation:
 `document.getElementById('avatar-pov-node').object3D.getWorldQuaternion();`
+<<<<<<< HEAD
 whichi s the `rigQuant` above.
+=======
+which is the `rigQuant` above.
+
+### research-tourguide
+
+This allows a group of people to automatically follow a player. The
+follow can be started from chat via `/tourguide PLAYERNAME` or from
+the url with `&tourguide=PLAYERNAME`.  There are a lot of questions
+such as:
+
+ * ✅ How far can a guide move before a user teleports to them (how do we
+   define a local area). We set this any total movement change > 3.5.
+ * ✅ How long a delay to use to catch up to the guide (we don't want to
+   teleport at every tick)? This was fixed with the previous setting
+   mostly.
+ * ✅ How should we scatter people around the guide? People are randomly
+   scattered within an interval.
+ * We need to enable flying to a teleport location
+   
+The tourguide chat added code into `message-dispatch.js` and
+`./react-components/chat-command-help.js` as well as the i18n
+translations.
+>>>>>>> 8b50a74dab21e359463f2898037ccb4ef1c8c7e1
 
 ## Notes
 
